@@ -8,7 +8,25 @@
 </head>
 <body>
     <section class="layout">
-
+        <header>To-Do-List</header>
+        <section class="main-content">
+            <textarea name="Feedback" cols="60" rows="4" id="box" placeholder="Add your to-do-list-here"></textarea><br><br>
+            <button onclick="myFunction()" id="box-down" >ADD</button>
+        </section>
+        <section class="to-do-list-save-part" id="save-part">
+        </section>
     </section>
+<script src="script.js"></script>
+</body>
+
+    <script >
+        function myFunction() {
+    var textBoxValue = document.getElementById("box").value;
+    var paragraph = document.createElement("p");
+    paragraph.textContent = textBoxValue;
+    document.getElementById("save-part").appendChild(paragraph);
+    document.getElementById("box").value = "";
+}
+    </script>
 </body>
 </html>
