@@ -1,57 +1,87 @@
-*
-{
+* {
     box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    background-color:white;
+body {
+    margin: 0;
+    background-color: #f2994a;
 }
 
-.layout
-{
-    margin-left :25%;
-    width:50%;
-    height:100vh;
-    border:solid 2px gray;
-    background-color:rgb(220, 167, 220);
-    position:fixed;
+.layout {
+    margin-top: 3%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+    width: 50%;
+    min-height: 20%;
+    border: solid 2px gray;
+    border-radius: 2%;
+    background-color: #f2c94c;
 }
 
-header{
-    text-align:center;
-    font-weight:bolder;
-    font-size: 2rem;
-    margin-top:5%;
-    color:azure;
+h2,
+img {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
 }
 
-#box
-{
-    margin-left: 20%;
-    margin-top:10%;
-    margin-bottom: 0;
-    text-align: center;
-    border-radius:2em;
-    border:solid 2px gray;
-    display:block;
+.input-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2%;
+    background-color: rgb(208, 191, 191);
+    margin-bottom: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
-#box-down
-{
-    margin-top:0;
-    margin-left: 50%;
-    text-align: center;
-    border-radius:2em;
-    border:solid 2px gray;
-    display:block;
+#box {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 2%;
+    font-weight: bolder;
+    border-radius: 10%;
 }
- 
-.to-do-list-save-part
-{
-    width:70%;
-    height:50%;
-    margin-top: 5%;
-    margin-left:15%;
-    background-color:pink;
+
+button {
+    background-color: #f2994a;
+    padding: 2%;
+    font-weight: bolder;
+    border-radius: 10%;
+    width: 15%;
+}
+
+ul li {
+    list-style: none;
+    position: relative;
+    padding-left: 40px;
+    line-height: 28px;
+    margin-bottom: 5%;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-color: #f2994a;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+}
+
+ul li span {
+    justify-content: space-between;
+    margin-left: 80%;
+    font-weight: bolder;
+    height: 5%;
+    width: 5%;
+    border: 2px solid;
+    background-color: white;
+    padding: 20 80 20 80;
 }

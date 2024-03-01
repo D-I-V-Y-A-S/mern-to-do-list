@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>to-do-list</title>
 </head>
+
 <body>
     <section class="layout">
-        <header>To-Do-List</header>
-        <section class="main-content">
-            <textarea name="Feedback" cols="60" rows="4" id="box" placeholder="Add your to-do-list-here"></textarea><br><br>
-            <button onclick="myFunction()" id="box-down" >ADD</button>
+        <h2><img src="assets/images/check-list.png" alt="to-do-list icon" style="height:60px; width:auto">TO-DO-LIST
+        </h2>
+        <section class="input-text">
+            <input type="text" name="input-box" id="box" placeholder="Enter your text here">
+            <button onclick="addtask()">ADD</button>
         </section>
-        <section class="to-do-list-save-part" id="save-part">
-        </section>
+
+        <ul id="list-items">
+        </ul>
+
     </section>
-<script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
-    <script >
-        function myFunction() {
-    var textBoxValue = document.getElementById("box").value;
-    var paragraph = document.createElement("p");
-    paragraph.textContent = textBoxValue;
-    document.getElementById("save-part").appendChild(paragraph);
-    document.getElementById("box").value = "";
-}
-    </script>
-</body>
 </html>
