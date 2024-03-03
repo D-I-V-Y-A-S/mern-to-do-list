@@ -1,30 +1,27 @@
-const inputbox = document.getElementById("box");
-let list = document.getElementById("list-items");
+const inputbox = document.querySelector("#box");
+const list = document.querySelector("#list");
+const DisplayElement = document.getElementById("view");
+let count = 0;
+
 function addtask() {
-    if (inputbox.value === '') {
-        alert("You should enter some task!!");
+    if (inputbox.value.trim() === '') {
+        showAlert("You should enter some task!!");
+    } else {
+        addItem(inputbox.value);
+        inputbox.value = "";
     }
-    else {
-        let li = document.createElement("li");
-        let span = document.createElement("span");
-        li.innerHTML = inputbox.value;
-        list.appendChild(li);
-        span.innerHTML = "\u00d7";
-        li.appendChild(span);
-        list.appendChild(li);
-        inputbox.value = " ";
-    }
-    const listContainer = document.getElementById("list-items");
-    listContainer.addEventListener("click", function (event) {
-        const clickedElement = event.target;
-        if (clickedElement.tagName === "li") {
-            clickedElement.classList.toggle("checked");
-        } else if (clickedElement.tagName === "span") {
-            const parentLi = clickedElement.parentElement;
-            parentLi.remove();
-        }
-    }, false);
-
-
-
 }
+
+let showAlert = (message) => {
+    alert(message);
+};
+
+let addItem = (task) => {
+    let listItem = document.createElement("li");
+    listItem.innerHTML = `${task}<i></i>`;
+    list.appendChild(listItem);
+    if (count === 0) {
+        DisplayElement.style.display = "block";
+        count++;
+    }
+};

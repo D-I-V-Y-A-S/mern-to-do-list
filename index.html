@@ -10,16 +10,27 @@
 
 <body>
     <section class="layout">
-        <h2><img src="assets/images/check-list.png" alt="to-do-list icon" style="height:60px; width:auto">TO-DO-LIST
-        </h2>
+        <div class="align">
+            <h2><img src="assets/images/check-list.png" alt="to-do-list icon" style="height:50px; width:auto">TO-DO-LIST
+            </h2>
+        </div>
+        <h3>Pick a category:</h3>
+        <div class="position">
+            <div class="section">
+                <input type="radio" name="category" id="selector1">
+                <p>Work</p>
+            </div>
+            <div class="section">
+                <input type="radio" name="category" id="selector2">
+                <p>Personal</p>
+            </div>
+        </div>
         <section class="input-text">
             <input type="text" name="input-box" id="box" placeholder="Enter your text here">
-            <button onclick="addtask()">ADD</button>
+            <button id="submit" onclick="addtask()">ADD</button>
         </section>
-
-        <ul id="list-items">
-        </ul>
-
+        <h3 id ="view">YOUR TO-DO-LIST</h3>
+       <ol id="list" type="1" style="font-size: larger;"></ol>
     </section>
     <script src="assets/js/script.js"></script>
 </body>
