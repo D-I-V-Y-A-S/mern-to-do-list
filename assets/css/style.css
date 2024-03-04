@@ -118,6 +118,8 @@ h3{
 
 #list li
 {
+    display: flex;
+    position: relative;
     width:60%;
     height:auto;
     padding:2%;
@@ -130,27 +132,22 @@ h3{
 }
 
 #list li i{
-    height:30px;
-    width:30px;
-    border-radius: 50%;
-    background-color: purple;
-    padding: 2%;
-    margin-left: 95%;
-    display: inline-block;
+    width:40px;
+    height:40px;
+    border-radius: 30%;
+    background-color:rgb(244, 185, 244);
+    position: absolute;
+    right:-60px;
+    transform: translateY(-27%);
 }
 
-#list li i::before{
-    content: '';
-    width:15px;
-    height:2px;
-    color:white;
-    margin-top:50%;
-    display:block;
-    transform:rotate(45deg);
-} 
-
-#view
-{
-    color:#81689D;
-    display:none;
+#list li i img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
 }
+
+
+
