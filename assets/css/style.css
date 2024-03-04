@@ -6,6 +6,7 @@
 body
 {
     background-color:#81689D;
+    margin: 0px;
 }
 
 .layout{
@@ -20,8 +21,7 @@ body
 
 .align
 {
-    height:15%;
-    top:0;
+    top:15%;
     background-color:violet;
 }
 
@@ -115,7 +115,10 @@ h3{
     margin-left: 3%;
     font-size: x-large;
 }
-
+#view
+{
+    display: none;
+}
 #list li
 {
     display: flex;
@@ -132,13 +135,33 @@ h3{
 }
 
 #list li i{
+    display: flex;
     width:40px;
     height:40px;
     border-radius: 30%;
     background-color:rgb(244, 185, 244);
     position: absolute;
-    right:-60px;
+    right:-80px;
     transform: translateY(-27%);
+    margin-right:3%;
+}
+#list li p img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+#list li  p {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    background-color: rgb(244, 185, 244);
+    position: absolute;
+    right: -130px;
+    transform: translateY(-70%);
 }
 
 #list li i img {
@@ -149,5 +172,25 @@ h3{
     margin: auto;
 }
 
+#list li  b {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    background-color: rgb(244, 185, 244);
+    position: absolute;
+    right: -190px;
+    transform: translateY(-20%);
+}
 
-
+#list li b img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+#list li b
+{
+    display: none;
+}

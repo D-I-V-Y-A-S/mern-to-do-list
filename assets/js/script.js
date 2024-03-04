@@ -5,7 +5,7 @@ const workRadio = document.getElementById("selector1");
 const personalRadio = document.getElementById("selector2");
 let count = 0;
 
-function addtask() {
+function addTask() {
     if (inputbox.value.trim() === '') {
         showAlert("You should enter some task!!");
     } else if (!workRadio.checked && !personalRadio.checked) {
@@ -24,11 +24,17 @@ let showAlert = (message) => {
 
 let addItem = (task) => {
     let listItem = document.createElement("li");
-    listItem.innerHTML = `${task}<i><img src='assets/images/delete.png' alt='Delete'></i>`;
+    listItem.innerHTML = `${task} <p><img src='assets/images/delete.png' alt="delete-icon"></p><i><img src='assets/images/edit.png' alt='edit-icon'></i><b><img src='assets/images/bookmark.png' alt="save-icon"></b>`;
     list.appendChild(listItem);
-    let deleteButton = listItem.querySelector('i');
+
+    let deleteButton = listItem.querySelector('p');
     deleteButton.addEventListener('click', () => {
         removeItem(listItem);
+    });
+
+    let editButton = listItem.querySelector('i');
+    editButton.addEventListener('click', () => {
+        editItem(listItem);
     });
 
     if (workRadio.checked) {
@@ -44,7 +50,17 @@ let addItem = (task) => {
         count++;
     }
 };
-
 let removeItem = (item) => {
     list.removeChild(item);
+};
+let editItem = (listItem) => {
+    let taskText = listItem.firstChild;
+    listItem.contentEditable = true;
+    listItem.focus();
+    let saveButton = listItem.querySelector('b');
+    saveButton.style.display = 'inline';
+    saveButton.addEventListener('click', () => {
+    listItem.contentEditable = false;
+    saveButton.style.display = 'none';
+    });
 };
